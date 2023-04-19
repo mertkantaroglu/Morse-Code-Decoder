@@ -23,7 +23,7 @@ puts decode_word('-- -.--   -. .- -- .')
 
 # Decode a Sentence Using decode_word function
 def decode_sentence(sentence)
-  sentence.split('  ').map { |word| get_word(word) }.join('  ')
+  sentence.split('  ').map { |word| decode_word(word) }.join('  ')
 end
 
 puts decode_sentence('.-  -... --- -..-   ..-. ..- .-.. .-..   --- ..-.  .-. ..- -... .. . ...')
