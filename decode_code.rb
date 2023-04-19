@@ -39,3 +39,10 @@ def decode_word(word)
   return decoded_chars.join(‘’)
 end
 puts decode_word(“-- -.--   -. .- -- .“)
+
+# Decode a Sentence Using decode_word function
+def decode_sentence(sentence)
+  decoded_words = sentence.split(' ’).map{|word| decode_word(word)}
+  return decoded_words.join(' ‘)
+end
+puts decode_sentence(’      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...’) 
