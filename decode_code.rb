@@ -33,3 +33,9 @@ def decode_char(char)
 end
 
 puts decode_char('--')
+# Decode a Word Using decode_char function
+def decode_word(word)
+  decoded_chars = word.split.map { |char| decode_char(char) }
+  return decoded_chars.join(‘’)
+end
+puts decode_word(“-- -.--   -. .- -- .“)
